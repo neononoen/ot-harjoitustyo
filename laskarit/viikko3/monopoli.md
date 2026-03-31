@@ -19,7 +19,7 @@
     }
     Pelaaja "1" -- "*" Katu
     Katu "1" -- "0..4" Talo
-    Katu "1" -- 0, 1" Hotelli
+    Katu "1" -- "0, 1" Hotelli
     Ruutu "1" -- "1" Toiminto
     SattumaJaYhteismaa "1" -- "1" Kortti
     Kortti "1" -- "1" Toiminto
