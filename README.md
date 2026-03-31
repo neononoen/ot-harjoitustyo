@@ -7,6 +7,8 @@ Sovelluksen tarkoitus on toimia digitaalisena neulelankojen varastona, jonne kä
 
 [Työaikakirjanpito](https://github.com/neononoen/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 
+[Changelog](https://github.com/neononoen/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)
+
 ## Sovelluksen asennus
 
 1. Riippuvuuksien asentaminen
