@@ -9,7 +9,7 @@ class YarnService:
         yarn = Yarn(name, colour, weight, meters, type)
 
         return self._yarn_repository.add(yarn)
-    
+
     def get_all_yarns(self):
         return self._yarn_repository.get_all()
 

@@ -26,5 +26,5 @@ poetry run invoke build
 3. Sovelluksen käynnistäminen
 
 ```bash
-poetry run invoke build
+poetry run invoke start
 ```

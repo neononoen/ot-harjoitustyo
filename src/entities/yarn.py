@@ -8,4 +8,3 @@ class Yarn:
         self.meters = meters
         self.type = type
         self.id = str(uuid4())
-    

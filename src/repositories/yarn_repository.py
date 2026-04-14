@@ -4,14 +4,15 @@ from database_connection import get_database_connection
 class YarnRepository:
     def __init__(self, connection):
         self._connection = connection
-    
+
     def get_all(self):
         cursor = self._connection.cursor()
         cursor.execute("select * from yarns")
         rows = cursor.fetchall()
 
-        return [Yarn(row["name"], row["colour"], row["weight"], row["meters"], row["type"], row["id"]) for row in rows]
-    
+        return [Yarn(row["name"], row["colour"], row["weight"], row["meters"],
+                     row["type"], row["id"]) for row in rows]
+
     def add(self, yarn):
         cursor = self._connection.cursor()
         cursor.execute(

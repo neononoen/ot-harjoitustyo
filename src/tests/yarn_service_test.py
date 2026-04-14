@@ -5,10 +5,10 @@ from services.yarn_service import YarnService
 class FakeYarnRepository:
     def __init__(self, yarns=None):
         self.yarns = yarns or []
-    
+
     def get_all(self):
         return self.yarns
-    
+
     def add(self, yarn):
         self.yarns.append(yarn)
 
@@ -26,8 +26,3 @@ class TestYarnService(unittest.TestCase):
 
         self.assertEqual(len(yarns), 2)
         self.assertEqual(yarns[1].name, "Puuvillalanka")
-
-
-
-
-

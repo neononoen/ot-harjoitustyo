@@ -1,12 +1,12 @@
 from tkinter import Tk
-from ui.add_yarn_view import UI
+from ui.ui import UI
 
 def main():
     window = Tk()
     window.title("Lankavarasto")
 
     ui = UI(window)
-    ui.add_yarn()
+    ui.start()
 
     window.mainloop()
 
