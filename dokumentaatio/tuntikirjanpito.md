@@ -9,5 +9,5 @@
 | 31.3. | 2 | käyttöliittymän toteutuksen aloitus, ensimmäinen testi |
 |       | 2 | invoke-tehtävät, changelogin tekeminen, readme:n päivitys |
 | 9.4.  | 4 | käyttöliittymän muokkausta, kaikkien lankojen listaus |
-| 14.4. | 4 | muutoksia käyttöliittymään, etusivun lisääminen, pylintin käyttöönotto |
+| 14.4. | 4 | muutoksia käyttöliittymään, etusivun lisääminen, pylintin käyttöönotto, luokkakaavio |
 | yht.  | 20| |
