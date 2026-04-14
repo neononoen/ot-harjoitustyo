@@ -9,6 +9,8 @@ Sovelluksen tarkoitus on toimia digitaalisena neulelankojen varastona, jonne kä
 
 [Changelog](https://github.com/neononoen/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)
 
+[Arkkitehtuuri](https://github.com/neononoen/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
+
 ## Sovelluksen asennus
 
 1. Riippuvuuksien asentaminen
