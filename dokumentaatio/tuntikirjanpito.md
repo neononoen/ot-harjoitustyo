@@ -11,7 +11,7 @@
 | 9.4.  | 4 | käyttöliittymän muokkausta, kaikkien lankojen listaus |
 | 14.4. | 4 | muutoksia käyttöliittymään, etusivun lisääminen, pylintin käyttöönotto, luokkakaavio |
 | 15.4. | 1,5 | käyttöliittymän muokkausta, langan poistamisen toteutus |
-| 17.4. | 1 | langan poistamisen toteutus |
-| 20.4. | 3 | langan poistamisen toteutus, langan hakeminen metrimäärän perusteella |
-| 21.4. || langan hakeminen metrimäärän perusteella, lisää testausta|
-| yht.  | 20| | muista merkkaa yhteensä!!!!!
+| 17.4. | 1,5 | langan poistamisen toteutusta |
+| 20.4. | 4 | langan poistamisen toteutusta, langan hakeminen metrimäärän perusteella |
+| 21.4. | 4 | langan hakeminen metrimäärän perusteella, lisää testausta, sekvenssikaavion tekeminen|
+| yht.  | 31 | |
