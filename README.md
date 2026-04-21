@@ -31,6 +31,14 @@ poetry run invoke build
 poetry run invoke start
 ```
 
+## Sovelluksen käynnistäminen
+
+Sovelluksen voi käynnistää komennolla
+
+```bash
+poetry run invoke start
+```
+
 ## Testaus
 
 Sovelluksen testit voi suorittaa komennolla
