@@ -2,6 +2,7 @@
 
 Uuden langan lisäämistä kuvaava sekvenssikaavio:
 
+```mermaid
 sequenceDiagram
     actor User
     participant UI
@@ -14,3 +15,4 @@ sequenceDiagram
     YarnService->>YarnRepository: add(yarn)
     YarnRepository-->>YarnService: yarn
     UI->>UI: initialize_entry_fields()
+```
