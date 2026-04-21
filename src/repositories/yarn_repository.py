@@ -24,4 +24,25 @@ class YarnRepository:
 
         return yarn
 
+    def delete(self, yarn_id):
+        cursor = self._connection.cursor()
+        cursor.execute("delete from yarns where id = ?", (yarn_id, ))
+
+        self._connection.commit()
+
+    def delete_all(self):
+        cursor = self._connection.cursor()
+        cursor.execute("delete from yarns")
+
+        self._connection.commit()
+
+    def find_by_meterage(self, meters):
+        cursor = self._connection.cursor()
+        cursor.execute("select * from yarns where meters >= ?", (meters, ))
+
+        rows = cursor.fetchall()
+
+        return [Yarn(row["name"], row["colour"], row["weight"], row["meters"],
+                     row["type"], row["id"]) for row in rows]
+
 yarn_repository = YarnRepository(get_database_connection())

@@ -30,3 +30,27 @@ poetry run invoke build
 ```bash
 poetry run invoke start
 ```
+
+## Testaus
+
+Sovelluksen testit voi suorittaa komennolla
+
+```bash
+poetry run invoke test
+```
+
+## Testikattavuus
+
+Testikattavuusraportin saa komennolla
+
+```bash
+poetry run invoke coverage-report
+```
+
+## Pylint
+
+Pylint-tarkistuksen voi suorittaa komennolla
+
+```bash
+poetry run invoke lint
+```

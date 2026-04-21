@@ -1,6 +1,7 @@
 from ui.add_yarn_view import AddYarnView
 from ui.yarns_view import YarnsView
 from ui.main_view import MainView
+from ui.search_yarns_view import SearchYarnsView
 
 class UI:
     def __init__(self, root):
@@ -17,7 +18,7 @@ class UI:
     def _show_main_view(self):
         self._hide_current_view()
 
-        self._current_view = MainView(self._root, self._show_yarns_view, self._show_add_yarn_view)
+        self._current_view = MainView(self._root, self._show_yarns_view, self._show_add_yarn_view, self._show_search_yarns_view)
 
     def _show_add_yarn_view(self):
         self._hide_current_view()
@@ -29,3 +30,11 @@ class UI:
 
         self._current_view = YarnsView(self._root, self._show_main_view)
 
+        self._current_view.pack()
+    
+    def _show_search_yarns_view(self):
+        self._hide_current_view()
+
+        self._current_view = SearchYarnsView(self._root, self._show_main_view)
+
+        self._current_view.pack()

@@ -4,3 +4,4 @@ __pycache__
 htmlcov
 .venv
 data/database.sqlite
+data/test-database.sqlite

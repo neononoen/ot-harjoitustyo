@@ -10,4 +10,8 @@
 |       | 2 | invoke-tehtävät, changelogin tekeminen, readme:n päivitys |
 | 9.4.  | 4 | käyttöliittymän muokkausta, kaikkien lankojen listaus |
 | 14.4. | 4 | muutoksia käyttöliittymään, etusivun lisääminen, pylintin käyttöönotto, luokkakaavio |
-| yht.  | 20| |
+| 15.4. | 1,5 | käyttöliittymän muokkausta, langan poistamisen toteutus |
+| 17.4. | 1 | langan poistamisen toteutus |
+| 20.4. | 3 | langan poistamisen toteutus, langan hakeminen metrimäärän perusteella |
+| 21.4. || langan hakeminen metrimäärän perusteella, lisää testausta|
+| yht.  | 20| | muista merkkaa yhteensä!!!!!

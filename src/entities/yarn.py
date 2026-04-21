@@ -7,4 +7,4 @@ class Yarn:
         self.weight = weight
         self.meters = meters
         self.type = type
-        self.id = str(uuid4())
+        self.id = yarn_id if yarn_id else str(uuid4())

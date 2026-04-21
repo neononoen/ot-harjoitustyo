@@ -84,4 +84,7 @@ class AddYarnView:
 
         self._initialize_entry_fields()
 
+        main_view_button = ttk.Button(master=self._frame, text="Takaisin", command=self._handle_show_main_view)
+        main_view_button.grid(row=8, column=0, columnspan=2)
+
         self._frame.pack()
