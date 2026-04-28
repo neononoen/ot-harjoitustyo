@@ -10,8 +10,8 @@ Sovellus toimii käyttäjälle digitaalisena lankavarastona. Sovelluksen avulla 
     - langan nimi, väri ja määrä
 - Käyttäjä pystyy lisäämään varastoon lankoja (tehty)
 - Käyttäjä pystyy poistamaan lankoja varastosta (tehty)
-- Käyttäjä pystyy lisäämään tai vähentämään jo varastossa olevan langan määrää
-- Käyttäjä pystyy hakemaan varastosta lankoja eri ominaisuuksien mukaan
+- Käyttäjä pystyy lisäämään tai vähentämään jo varastossa olevan langan määrää (tehty)
+- Käyttäjä pystyy hakemaan varastosta lankoja eri ominaisuuksien mukaan (tehty)
     - lankoja voi hakea esimerkiksi vahvuuden tai määrän perusteella
 
 ## Jatkokehitysideoita

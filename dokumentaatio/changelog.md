@@ -19,3 +19,11 @@
 - Käyttäjä pystyy hakemaan lankoja varastosta metrimäärän perusteella
 - Testattu, että Yarnservice-luokka toimii langan poistamisen ja hakemisen osalta
 - YarnRepository-luokan testaus aloitettu, testattu, että luokka toimii langan lisäämisen, poistamisen ja hakemisen osalta
+
+## Viikko 6
+
+- Käyttäjä voi hakea lankoja metrimäärän ja vahvuuden perusteella
+- Käyttäjä voi muokata langan määrää
+- Langan lisäämisen yhteydessä tarkistetaan, jos samaa lankaa löytyy jo varastosta, ja lisätään uusi määrä jo varastossa olevaan
+- Käyttäjä saa virheilmoituksen virheellisistä syötteistä ja vahvistuksen toiminnon onnistuessa
+- Testattu, että langan lisääminen ei onnistu virheelliseellä syötteellä

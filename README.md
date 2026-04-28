@@ -1,8 +1,6 @@
 # Ohjelmistotekniikka, harjoitustyö
 Sovelluksen tarkoitus on toimia digitaalisena neulelankojen varastona, jonne käyttäjä pystyy lisäämään lankoja sekä hakea varastossa jo olevia lankoja.
 
-[Release](https://github.com/neononoen/ot-harjoitustyo/releases/tag/viikko5)
-
 ## Dokumentaatio
 
 [Vaatimusmäärittely](https://github.com/neononoen/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
@@ -12,6 +10,12 @@ Sovelluksen tarkoitus on toimia digitaalisena neulelankojen varastona, jonne kä
 [Changelog](https://github.com/neononoen/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)
 
 [Arkkitehtuuri](https://github.com/neononoen/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
+
+## Releaset
+
+[Viikko 5](https://github.com/neononoen/ot-harjoitustyo/releases/tag/viikko5)
+
+
 
 ## Sovelluksen asennus
 

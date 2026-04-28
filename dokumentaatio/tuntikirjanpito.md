@@ -14,4 +14,8 @@
 | 17.4. | 1,5 | langan poistamisen toteutusta |
 | 20.4. | 4 | langan poistamisen toteutusta, langan hakeminen metrimäärän perusteella |
 | 21.4. | 4 | langan hakeminen metrimäärän perusteella, lisää testausta, sekvenssikaavion tekeminen|
-| yht.  | 31 | |
+| 24.4. | 3 | hakutoiminnon laajennus, virheiden käsittely |
+| 25.4. | 2 | langan hakeminen vahvuuden perusteella
+| 27.4. | 5 | testausta, docstring-dokumentaatio, käyttöohje, langan määrän muuttaminen |
+| 28.4. | 3 | langan määrän muuttaminen, dokumentaatio, testien tekemistä |
+| yht.  | 44 | |
