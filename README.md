@@ -17,7 +17,7 @@ Sovelluksen tarkoitus on toimia digitaalisena neulelankojen varastona, jonne kä
 
 [Viikko 5](https://github.com/neononoen/ot-harjoitustyo/releases/tag/viikko5)
 
-
+[Viikko 6](https://github.com/neononoen/ot-harjoitustyo/releases/tag/viikko6)
 
 ## Sovelluksen asennus
 
