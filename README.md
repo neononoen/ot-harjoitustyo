@@ -11,6 +11,8 @@ Sovelluksen tarkoitus on toimia digitaalisena neulelankojen varastona, jonne kä
 
 [Arkkitehtuuri](https://github.com/neononoen/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
 
+[Käyttöohje](https://github.com/neononoen/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)
+
 ## Releaset
 
 [Viikko 5](https://github.com/neononoen/ot-harjoitustyo/releases/tag/viikko5)
