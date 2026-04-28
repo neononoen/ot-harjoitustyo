@@ -81,6 +81,7 @@ class YarnsView:
     def _handle_remove_yarn(self, yarn_id):
         yarn_service.delete_yarn(yarn_id)
         self._initialize()
+        self._show_message("Lanka poistettu")
         self._frame.pack()
 
     def _initialize_edit_entry(self, yarn_id):
@@ -94,10 +95,12 @@ class YarnsView:
         self._edit_weight_entry = ttk.Entry(master=self._edit_frame)
         save_button = ttk.Button(master=self._edit_frame, text="Tallenna",
                                   command=lambda: self._handle_edit(yarn_id))
+        grams_label = ttk.Label(master=self._edit_frame, text="grammaa")
 
         edit_label.grid(row=0, column=0, padx=5, pady=5)
         self._edit_weight_entry.grid(row=0, column=1, padx=5, pady=5)
-        save_button.grid(row=0, column=2, padx=5, pady=5)
+        grams_label.grid(row=0, column=2, padx=5, pady=5)
+        save_button.grid(row=0, column=3, padx=5, pady=5)
 
     def _handle_edit(self, yarn_id):
         meters = self._edit_weight_entry.get()
