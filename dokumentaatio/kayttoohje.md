@@ -1,5 +1,11 @@
 # Käyttöohje
 
+Lataa projektin lähdekoodi [täältä](https://github.com/neononoen/ot-harjoitustyo/releases/tag/loppupalautus).
+
+## Konfigurointi
+
+Tietokannan tallennukseen käytettävä tiedoston nimen voi konfiguroida .env-tiedostossa.
+
 ## Sovelluksen asennus ja käynnistäminen
 
 1. Riippuvuuksien asentaminen
