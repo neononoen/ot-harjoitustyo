@@ -3,7 +3,7 @@ from ui.ui import UI
 
 def main():
     window = Tk()
-    window.geometry("600x500")
+    window.geometry("700x500")
     window.title("Lankavarasto")
 
     ui = UI(window)

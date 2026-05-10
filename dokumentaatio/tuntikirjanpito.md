@@ -18,4 +18,7 @@
 | 25.4. | 2 | langan hakeminen vahvuuden perusteella
 | 27.4. | 5 | testausta, docstring-dokumentaatio, käyttöohje, langan määrän muuttaminen |
 | 28.4. | 3 | langan määrän muuttaminen, dokumentaatio, testien tekemistä |
-| yht.  | 44 | |
+| 30.4. | 3 | käyttöliittymän ulkoasu, varastotilanne-näkymän lisääminen
+| 9.5.  | 4 | hakuominaisuuden laajennus, testien tekemistä
+| 10.5. | 4 | dokumentaatio
+| yht.  | 55 | |

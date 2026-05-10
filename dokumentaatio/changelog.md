@@ -27,3 +27,8 @@
 - Langan lisäämisen yhteydessä tarkistetaan, jos samaa lankaa löytyy jo varastosta, ja lisätään uusi määrä jo varastossa olevaan
 - Käyttäjä saa virheilmoituksen virheellisistä syötteistä ja vahvistuksen toiminnon onnistuessa
 - Testattu, että langan lisääminen ei onnistu virheelliseellä syötteellä
+
+## Viikko 7
+
+- Käyttäjä voi tarkastella erilaisia tietoja varastostaan
+- Käyttäjä voi hakea lankoja erilaisilla hakuominaisuuksilla

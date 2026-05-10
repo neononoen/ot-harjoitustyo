@@ -28,11 +28,12 @@ classDiagram
 
 ## Käyttöliittymä
 
-Sovelluksessa on 4 eri näkymää:
+Sovelluksessa on 5 eri näkymää:
 - Päävalikko, joka avautuu, kun sovellus käynnistetään
 - Langan lisääminen
 - Lankojen listaus ja poistaminen/muokkaus
 - Lankojen haku
+- Varastotilanne
 
 Luokka UI vastaa sovelluksen käyttöliittymän eri näkymistä. Sovelluksen eri näkymät ovat jaettu omiin tiedostoihinsa ja luokkiinsa. Käyttöliittymän luokat kutsuvat luokan YarnService metodeja, jotka vastaavat sovelluslogiikasta.
 

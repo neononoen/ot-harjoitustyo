@@ -1,5 +1,5 @@
 from tkinter import ttk, constants, StringVar
-from services.yarn_service import yarn_service, InvalidInputError
+from services.yarn_service import yarn_service, InvalidInputError, InvalidYarnTypeError
 
 class YarnListView:
     """Luokka, joka vastaa hakuehtoja vastaavien lankojen listaamisesta"""
@@ -18,7 +18,7 @@ class YarnListView:
 
     def pack(self):
         """Näyttää näkymän."""
-        self._frame.pack(fill="x")
+        self._frame.pack(fill=constants.X, expand=True)
 
     def destroy(self):
         """Tuhoaa näkymän."""
@@ -42,16 +42,16 @@ class YarnListView:
         meters_label = ttk.Label(master=yarn_frame, text=f'{yarn.meters} m')
         type_label = ttk.Label(master=yarn_frame, text=yarn.yarn_type)
 
-        for i in range(6):
+        for i in range(7):
             yarn_frame.columnconfigure(i, weight=1)
 
-        name_label.grid(row=0, column=0, padx=5, pady=5, sticky=constants.E)
-        colour_label.grid(row=0, column=1, padx=5, pady=5, sticky=constants.E)
-        weight_label.grid(row=0, column=2, padx=5, pady=5, sticky=constants.E)
-        meters_label.grid(row=0, column=3, padx=5, pady=5, sticky=constants.E)
-        type_label.grid(row=0, column=4, padx=5, pady=5, sticky=constants.E)
+        name_label.grid(row=0, column=0, padx=5, pady=5, sticky=constants.W)
+        colour_label.grid(row=0, column=1, padx=5, pady=5, sticky=constants.W)
+        weight_label.grid(row=0, column=2, padx=5, pady=5, sticky=constants.W)
+        meters_label.grid(row=0, column=3, padx=5, pady=5, sticky=constants.W)
+        type_label.grid(row=0, column=4, padx=5, pady=5, sticky=constants.W)
 
-        yarn_frame.pack(fill='x')
+        yarn_frame.pack(fill=constants.X)
 
 class SearchYarnsView:
     """Luokka, joka vastaa lankojen haku -näkymästä"""
@@ -66,6 +66,8 @@ class SearchYarnsView:
         self._handle_show_main_view = handle_show_main_view
         self._frame = None
         self._search_fields_frame = None
+        self._name_entry = None
+        self._colour_entry = None
         self._meters_entry = None
         self._yarn_type_cb = None
         self._yarn_list_view = None
@@ -82,20 +84,22 @@ class SearchYarnsView:
 
     def pack(self):
         """Näyttää näkymän."""
-        self._frame.pack(fill="both")
+        self._frame.pack(fill=constants.BOTH, expand=True)
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
+        self._frame.columnconfigure(0, weight=1)
 
         self._error_variable = StringVar(self._frame)
         self._error_label = ttk.Label(master=self._frame, textvariable=self._error_variable)
         self._error_label.grid(padx=5, pady=5)
 
         main_view_button = ttk.Button(master=self._frame, text="Takaisin", command=self._handle_show_main_view)
-        main_view_button.grid(padx=5, pady=5)
+        main_view_button.grid(column=0, padx=5, pady=5, sticky=constants.W)
 
         self._search_fields_frame = ttk.Frame(master=self._frame)
-        self._search_fields_frame.grid(padx=5, pady=5)
+        self._search_fields_frame.grid(padx=5, pady=5, sticky=(constants.E, constants.W, constants.N, constants.S))
+        self._search_fields_frame.columnconfigure(1, weight=1)
 
         empty_fields_button = ttk.Button(master=self._frame, text="Tyhjennä", command=self._initialize_search_fields)
         empty_fields_button.grid(row=3, padx=5, pady=5)
@@ -103,26 +107,37 @@ class SearchYarnsView:
         self._initialize_search_fields()
 
         self._hide_error()
-        
+
     def _initialize_results(self):
         search_results_label = ttk.Label(master=self._results_frame, text="Hakutulokset:")
         search_results_label.grid(padx=5, pady=5)
 
     def _initialize_search_fields(self):
+        name_label = ttk.Label(master=self._search_fields_frame, text="Langan nimi:")
+        self._name_entry = ttk.Entry(master=self._search_fields_frame)
+
+        colour_label = ttk.Label(master=self._search_fields_frame, text="Väri:")
+        self._colour_entry = ttk.Entry(master=self._search_fields_frame)
+
         meters_label = ttk.Label(master=self._search_fields_frame, text="Metrimäärä:")
         self._meters_entry = ttk.Entry(master=self._search_fields_frame)
-        
-        yarn_types = ["kaikki", "lace", "fingering", "sport", "dk", "aran/worsted", "bulky"]
-        yarn_type_label = ttk.Label(master=self._search_fields_frame, text="Langan vahvuus")
+
+        yarn_types = yarn_service.get_yarn_types_for_search()
+        yarn_type_label = ttk.Label(master=self._search_fields_frame, text="Langan vahvuus:")
         self._yarn_type_cb = ttk.Combobox(master=self._search_fields_frame, values=yarn_types)
-        self._yarn_type_cb.set("valitse vahvuus")
+        self._yarn_type_cb.set(yarn_types[0])
+
         search_button = ttk.Button(master=self._search_fields_frame, text="Hae", command=self._handle_search)
 
-        meters_label.grid(row=0, column=0, padx=5, pady=5, sticky=constants.W)
-        self._meters_entry.grid(row=0, column=1, padx=5, pady=5, sticky=constants.W)
-        yarn_type_label.grid(row=1, padx=5, pady=5, sticky=constants.W)
-        self._yarn_type_cb.grid(row=1, column=1, padx=5, pady=5, sticky=constants.W)
-        search_button.grid(row=2, columnspan=2, padx=5, pady=5)
+        name_label.grid(row=0, padx=5, pady=5, sticky=constants.W)
+        self._name_entry.grid(row=0, column=1, padx=5, pady=5, sticky=(constants.E, constants.W))
+        colour_label.grid(row=1, padx=5, pady=5, sticky=constants.W)
+        self._colour_entry.grid(row=1, column=1, padx=5, pady=5, sticky=(constants.E, constants.W))
+        meters_label.grid(row=2, padx=5, pady=5, sticky=constants.W)
+        self._meters_entry.grid(row=2, column=1, padx=5, pady=5, sticky=(constants.E, constants.W))
+        yarn_type_label.grid(row=3, padx=5, pady=5, sticky=constants.W)
+        self._yarn_type_cb.grid(row=3, column=1, padx=5, pady=5, sticky=(constants.E, constants.W))
+        search_button.grid(row=4, columnspan=2, padx=5, pady=5)
 
     def _handle_search(self):
         if self._results_frame:
@@ -135,28 +150,33 @@ class SearchYarnsView:
         self._results_frame.grid(padx=5, pady=5)
         self._yarn_list_frame.grid(padx=5, pady=5)
 
+        name = self._name_entry.get()
+        colour = self._colour_entry.get()
         meters = self._meters_entry.get()
         yarn_type = self._yarn_type_cb.get()
 
         try:
-            yarns = yarn_service.get_yarns_by_search(meters, yarn_type)
+            yarns = yarn_service.get_yarns_by_search(name, colour, meters, yarn_type)
             self._hide_error()
             self._initialize_results()
             self._initialize_yarns(yarns)
         except InvalidInputError:
-            self._show_error("Virheellinen syöte")
-    
+            self._show_error("Syötä metrimäärä numeroina")
+        except InvalidYarnTypeError:
+            self._show_error("Valitse langan vahvuus listasta")
+
     def _show_error(self, message):
         self._error_variable.set(message)
         self._error_label.grid()
+        self._error_label.after(3000, self._hide_error)
 
     def _hide_error(self):
         self._error_label.grid_remove()
-    
+
     def _initialize_yarns(self, yarns):
         if self._yarn_list_view:
             self._yarn_list_view.destroy()
-        
+
         self._yarn_list_view = YarnListView(self._yarn_list_frame, yarns)
 
         self._yarn_list_view.pack()

@@ -2,20 +2,18 @@
 
 ## Sovelluksen tarkoitus
 
-Sovellus toimii käyttäjälle digitaalisena lankavarastona. Sovelluksen avulla käyttäjä pystyy hakemaan varastosta lankoja erilaisten ominaisuuksien mukaan.
+Sovellus toimii käyttäjälle digitaalisena lankavarastona. Sovelluksen avulla käyttäjä pystyy hakemaan varastosta lankoja erilaisten ominaisuuksien mukaan, joka helpottaa varaston ylläpitämistä.
 
-## Suunnitellut toiminnallisuudet
+## Toiminnallisuudet
 
-- Käyttäjä näkee varastossa olevat langat (tehty)
-    - langan nimi, väri ja määrä
-- Käyttäjä pystyy lisäämään varastoon lankoja (tehty)
-- Käyttäjä pystyy poistamaan lankoja varastosta (tehty)
-- Käyttäjä pystyy lisäämään tai vähentämään jo varastossa olevan langan määrää (tehty)
-- Käyttäjä pystyy hakemaan varastosta lankoja eri ominaisuuksien mukaan (tehty)
-    - lankoja voi hakea esimerkiksi vahvuuden tai määrän perusteella
+- Käyttäjä pystyy tarkastelemaan varastossa olevia lankoja ja näkee niiden tiedot
+- Käyttäjä pystyy lisäämään varastoon lankoja
+- Käyttäjä pystyy poistamaan lankoja varastosta
+- Käyttäjä pystyy muuttamaan varastossa olevan langan määrää
+- Käyttäjä pystyy hakemaan varastosta lankoja eri ominaisuuksien mukaan
+    - nimi, määrä, väri, langan vahvuus
+- Käyttäjä voi tarkastella varaston tietoja, kuten lankojen yhteispaino ja metrimäärä
 
 ## Jatkokehitysideoita
 
-- Langan yhteyteen voidaan merkitä mihin se aiotaan käyttää
-- Hakuominaisuuden laajentaminen
-- Käyttäjä näkee tietoja varastostaan, esimerkiksi langan kokonaismäärä
+- Lankoja voitaisiin liittää osaksi projektia ja näin suunnitella niiden käyttöä
